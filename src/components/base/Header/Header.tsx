@@ -37,7 +37,8 @@ const Header = () => {
         <h1 className="title">Olá,<br />eu sou o <span>{profileInfo.name}</span></h1>
 
         <div className="information">
-          <p className="job">{profileInfo.job} [<a href={profileInfo.linkedin} target="_blank">Linkedin</a>] [<a href={profileInfo.curriculum} target="_blank">Currículo</a>]</p>
+          <p className="job">{profileInfo.job} </p>
+
           <p className="location">{profileInfo.location}</p>
           <p className="phone">
             <a href={`tel:+55${profileInfo.phone}`}>{profileInfo.phone}</a>
@@ -45,6 +46,8 @@ const Header = () => {
           <p className="email">
             <a href={`mailto:${profileInfo.email}`}>{profileInfo.email}</a>
           </p>
+
+          <p>|<a href={profileInfo.linkedin} target="_blank"> [Linkedin]</a> | <a href={profileInfo.curriculum} target="_blank"> [Currículo]</a>|</p>
         </div>
       </>
         : "Erro ao carregar!"
