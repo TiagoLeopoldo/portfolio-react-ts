@@ -1,0 +1,30 @@
+/* Accordion.css */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  transition: .25s;
+}
+
+.accordion.open,
+.accordion:hover {
+  background-color: #587299;
+  border-color: #587299;
+}
+
+.content {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: opacity .99s ease-in-out;
+}
+
+.accordion.open .content {
+  display: block;
+  padding: 0 1rem 1rem 2rem;
+  height: auto;
+  opacity: 1;
+}

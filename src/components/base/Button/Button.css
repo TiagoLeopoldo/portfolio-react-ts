@@ -1,0 +1,38 @@
+/* Button.css */
+.trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #FFF;
+  border: none;
+}
+
+.trigger h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.trigger:hover {
+  cursor: pointer;
+}
+
+.trigger::after {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('../../assets/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: .45s;
+}
+
+.trigger.open::after {
+  transform: rotate(180deg);
+}
+
